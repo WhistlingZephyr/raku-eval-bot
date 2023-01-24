@@ -35,7 +35,7 @@ const bot = createBot({
           bot.helpers.sendMessage(
             message.channelId,
             {
-              content: `\`\`\`\n${
+              content: `\`\`\`ansi\n${
                 Object.values(result).filter(Boolean).join("\n")
               }\n\`\`\``,
               messageReference: {
