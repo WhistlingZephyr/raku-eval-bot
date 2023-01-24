@@ -17,7 +17,7 @@ const bot = createBot({
     async messageCreate(bot, message) {
       if (message.content.startsWith("m:")) {
         const code = message.content.match(
-          /m:\s*(?:```(?:\S*\n)?(.+?)```|`(.+?)`|(.+))/s,
+          /^m:\s*(?:```(?:\S*\n)?(.+?)```|`(.+?)`|(.+))$/s,
         )
           ?.slice(1, 4).find(Boolean);
         if (code) {
