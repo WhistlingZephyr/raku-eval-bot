@@ -26,7 +26,7 @@ const bot = createBot({
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                Authorization: Deno.env.get("API_KEY") ?? "",
+                Authorization: Deno.env.get("API_KEY")!,
               },
               body: JSON.stringify({
                 files: [{ name: "main.raku", content: code }],
