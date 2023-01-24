@@ -32,12 +32,11 @@ const bot = createBot({
                 files: [{ name: "main.raku", content: code }],
               }),
             })).json();
+          const output = Object.values(result).filter(Boolean).join("\n");
           bot.helpers.sendMessage(
             message.channelId,
             {
-              content: `\`\`\`ansi\n${
-                Object.values(result).filter(Boolean).join("\n") || " "
-              }\n\`\`\``,
+              content: output ? `\`\`\`ansi\n${output}\n\`\`\`` : "```\n```",
               messageReference: {
                 messageId: message.id,
                 failIfNotExists: false,
