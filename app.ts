@@ -4,6 +4,7 @@ import {
   Intents,
   startBot,
 } from "https://deno.land/x/discordeno@13.0.0/mod.ts";
+import { stripAnsi } from "https://deno.land/x/gutenberg@0.1.5/ansi/strip/mod.ts";
 
 const bot = createBot({
   token: Deno.env.get("DISCORD_TOKEN")!,
@@ -36,7 +37,7 @@ const bot = createBot({
           bot.helpers.sendMessage(
             message.channelId,
             {
-              content: output ? `\`\`\`ansi\n${output}\n\`\`\`` : "```\n```",
+              content: `\`\`\`\n${stripAnsi(output)}\n\`\`\``,
               messageReference: {
                 messageId: message.id,
                 failIfNotExists: false,
