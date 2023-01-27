@@ -1,9 +1,9 @@
+import "https://deno.land/x/dotenv@v3.2.0/load.ts";
 import {
   createBot,
   Intents,
   startBot,
 } from "https://deno.land/x/discordeno@13.0.0/mod.ts";
-import "https://deno.land/x/dotenv@v3.2.0/load.ts";
 
 const bot = createBot({
   token: Deno.env.get("DISCORD_TOKEN")!,
