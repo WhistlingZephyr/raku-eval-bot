@@ -37,7 +37,7 @@ const bot = createBot({
           bot.helpers.sendMessage(
             message.channelId,
             {
-              content: `\`\`\`\n${stripAnsi(output)}\n\`\`\``,
+              content: `\`\`\`\n${stripAnsi(output)}\`\`\``,
               messageReference: {
                 messageId: message.id,
                 failIfNotExists: false,
