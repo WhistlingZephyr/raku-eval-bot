@@ -1,9 +1,9 @@
-import "https://deno.land/x/dotenv@v3.2.0/load.ts";
+import "https://deno.land/x/dotenv@v3.2.2/load.ts";
 import {
   createBot,
   Intents,
   startBot,
-} from "https://deno.land/x/discordeno@13.0.0/mod.ts";
+} from "https://deno.land/x/discordeno@18.0.1/mod.ts";
 import { stripAnsi } from "https://deno.land/x/gutenberg@0.1.5/ansi/strip/mod.ts";
 
 const bot = createBot({
