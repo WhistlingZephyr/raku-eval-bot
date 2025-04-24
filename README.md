@@ -13,5 +13,5 @@ Create an `.env` file with `API_KEY` and `DISCORD_TOKEN`. You can get your glot.
 Run the bot with
 
 ```sh
-deno run --allow-env --allow-read --allow-net app.ts
+deno run --allow-env --allow-read --allow-net --allow-import app.ts
 ```
